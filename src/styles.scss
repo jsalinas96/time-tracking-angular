@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-yellow: hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+
+    max-width: 1440px;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}

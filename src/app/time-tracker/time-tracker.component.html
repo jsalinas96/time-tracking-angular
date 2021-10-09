@@ -1,0 +1,166 @@
+<div class="wrapper">
+    <div class="profile">
+      <div class="user-info">
+        <img src="assets/images/image-jeremy.png" alt="">
+        <div>
+          <p class="subtitle">Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      <ul>
+        <li (click)="clickEvent('daily')" [ngClass]="{selected: daily}">Daily</li>
+        <li (click)="clickEvent('weekly')" [ngClass]="{selected: weekly}">Weekly</li>
+        <li (click)="clickEvent('monthly')" [ngClass]="{selected: monthly}">Monthly</li>
+      </ul>
+    </div>
+    <div class="cards-container">
+      <div class="card work">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Work
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Work'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Work'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Work'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Work'">Yesterday - {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Work'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Work'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card play">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Play
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Play'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Play'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Play'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Play'">Yesterday- {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Play'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Play'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card study">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Study
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Study'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Study'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Study'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Study'">Yesterday - {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Study'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Study'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card exercise">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Exercise
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Exercise'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Exercise'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Exercise'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Exercise'">Yesterday - {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Exercise'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Exercise'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card social">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Social
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Social'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Social'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Social'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Social'">Yesterday - {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Social'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Social'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card selfcare">
+        <div class="card-content">
+          <div class="card-header">
+            <p>
+              Selfcare
+              <span>
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"></path></svg>
+              </span>
+            </p>
+          </div>
+          <div class="card-body">
+            <div *ngFor="let dato of datos">
+              <!--Current-->
+              <h1 *ngIf="daily == true && dato.title == 'Self Care'">{{dato.timeframes['daily'].current}}hrs</h1>
+              <h1 *ngIf="weekly == true && dato.title == 'Self Care'">{{dato.timeframes.weekly.current}}hrs</h1>
+              <h1 *ngIf="monthly == true && dato.title == 'Self Care'">{{dato.timeframes.monthly.current}}hrs</h1>
+              <!--Previous-->
+              <p class="subtitle" *ngIf="daily == true && dato.title == 'Self Care'">Yesterday - {{dato.timeframes.daily.previous}}hrs</p>
+              <p class="subtitle" *ngIf="weekly == true && dato.title == 'Self Care'">Last Week - {{dato.timeframes.weekly.previous}}hrs</p>
+              <p class="subtitle" *ngIf="monthly == true && dato.title == 'Self Care'">Last Month - {{dato.timeframes.monthly.previous}}hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">José Salinas</a>.
+</div>
