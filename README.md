@@ -1,7 +1,5 @@
 # Frontend Mentor - Time tracking dashboard
 
-![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
-
 Esta es una solución para: [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Los desafíos de Frontend Mentor ayudan a mejorar las habilidades de codificación mediante la construcción de proyectos realistas.
 
 ## Tabla de contenidos
@@ -33,7 +31,7 @@ Los usuarios deben poder:
 
 
 ### Links
-- Live Site URL: [Add live site URL here](https://time-tracking-angular.vercel.app/)
+- Live Site URL: [https://time-tracking-angular.vercel.app/](https://time-tracking-angular.vercel.app/)
 
 
 ### Desarrollado con
